@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Target exclusive offer.</title>
+    <meta name="description" content="Target exclusive offer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+    <div class="promo-bar">GET $50 OFF + $15 CREDIT*</div>
+  
+            <div class="header">
+                <div>
+                <img src="images/shipt_logo.svg" class="logo">
+          <div class="cta-header">  </div>
+            </div>
+        </div>
+<div class="container">
+        <section>
+            <div class="fullwidth hero">  
+                <div class="hero-content">
+                    <h1>Target<br class='show_on_mobile'/> exclusive offer.</h1>
+                    <div class="slhero">$49 membership (reg. $99) + $15 credit with
+                        <br class='hide_mobile'/> qualifying purchase.*</div>
+                    <div>
+                        <input type="text" id="input" placeholder="Enter ZIP code">
+                        <div class="cta" id="button">GET STARTED</div>
+                        <div id="alert">THIS ZIPCODE IS INVALID! PLEASE TRY AGAIN.</div>
+                    </div>
+                    <div class="terms">*Membership offer valid for new members only. Target order of $100 or more must be placed to qualify for $15 credit,<br class='hide_mobile'/> which expires 30 days after qualifying order is placed and can be applied to any order from Shipt.</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="store-container"><div id="store-header"></div>
+                <ul id="store-section"></ul>
+                <div id="store-cta"></div>
+            </div>
+        </section>
+        <section>
+            <div class="fullwidth">
+                <h2>Everything you love about<br/> Target at your fingertips.</h2>
+            </div>
+        </section>
+        <section>
+            <div class="third">
+                <div>
+                    <img src="images/cat1.jpg" alt="Scroll through the aisles." class="imgfullwidth">
+                    <h3>Scroll through<br/> the aisles.</h3>
+                    <div>Create an order from your local store in our app or on our website. </div>
+                </div>
+            </div>
+            <div class="third">
+                <div>
+                    <img src="images/cat2.jpg" alt="Our shoppers work their magic." class="imgfullwidth">
+                    <h3>Our shoppers work<br/> their magic.</h3>
+                    <div>Connect with your shopper and get live
+                        <br/> updates from the aisles.
+                    </div>
+                </div>
+            </div>
+            <div class="third">
+                <div>
+                    <img src="images/cat3.jpg" alt="We deliver your groceries." class="imgfullwidth">
+                    <h3>We deliver<br/> your groceries.</h3>
+                    <div>Schedule a delivery, and your order will
+                        <br/> arrive in as soon as 1 hour.</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="cta-bottom"><img src="images/cta_bottom.png" width="320"></div>
+        </section>
+    </div>
+    <div class="banner-bottom">&copy; 2018 Shipt, Inc. and its services are not necessarily affiliated or endorsed by the retailers on this site.</div>
+ 
+ 
+
+
+<script>
+document.getElementById('button').addEventListener('click', function() {
+
+var zip = document.getElementById('input').value;
+
+ var isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(zip);
+            if (isValid) {
+                  document.getElementById("alert").style.display = "none";
+                }
+            else {
+             document.getElementById("alert").style.display = "block";
+            }
+
+
+fetch('https://shipt-zip-code-test-api.herokuapp.com/api/zip_codes/'+zip)
+.then(res => res.json())
+.then((result) => {
+var openings = result;
+var storenames = [];
+for(var i=0, numopenings = openings.stores.length; i < numopenings; i++){
+var today = new Date();
+var store_launch = new Date(openings.stores[i].launch_date),
+year  = store_launch.getFullYear(),
+month  = (store_launch.getMonth() + 1);
+if (today < store_launch) {
+var store_launch = 'Coming&nbsp;'+([month,year].join('/'));
+}
+else {
+var store_launch = 'Now Available';
+//var store_launch = 'Now Available'+([month,year].join('/'));
+}
+storenames.push("<li>"+openings.stores[i].name+"<br/><span>"+store_launch+"</span></li>");
+document.getElementById('store-container').style.width = 194+(194*[i]) +'px';
+}
+document.getElementById("store-header").innerHTML =  "DELIVERING FROM";
+document.getElementById("store-container").style.padding = "0px 0px 60px 0px";
+document.getElementById("store-cta").style.display = "block";
+storenames =  storenames.sort().join("");
+document.getElementById("store-section").innerHTML =  storenames;
+}).catch(err => console.error(err));
+});
+</script>
+</body>
+</html>
