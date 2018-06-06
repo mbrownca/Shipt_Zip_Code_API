@@ -1,0 +1,357 @@
+/*Fonts*/
+ @font-face {
+     font-family: "Scandia-Bold";
+     src: url("font/Scandia-Bold.eot");
+     src: url("font/Scandia-Bold.eot?#iefix") format("embedded-opentype"), url("font/Scandia-Bold.woff2") format("woff2"), url("font/Scandia-Bold.woff") format("woff");
+}
+ @font-face {
+     font-family: "Scandia-Regular";
+     src: url("font/Scandia-Regular.eot");
+     src: url("font/Scandia-Regular.eot?#iefix") format("embedded-opentype"), url("font/Scandia-Regular.woff2") format("woff2"), url("font/Scandia-Regular.woff") format("woff");
+     font-weight: bold;
+     font-style: normal;
+}
+ body {
+     font-family: "Scandia-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin:0;
+}
+ .promo-bar{
+    background:#414042;
+    font-size:11px;
+    height:28px;
+    text-align:center;
+    line-height:28px;
+     color:#ffffff;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     letter-spacing: 1.5px;
+}
+ .container {
+     width: 1080px;
+     margin: 0 auto;
+}
+ section {
+     display: block;
+     clear: both;
+     padding: 0;
+     margin: 0;
+}
+ .header{
+    height:80px;
+    line-height: 80px;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    margin-bottom:16px;
+}
+ .header > div {
+    width:1080px;
+    margin:auto;
+}
+ .header > div > div{
+    display:inline-block;
+    vertical-align: middle;
+    width:128px;
+    height:51px;
+}
+ .header img.logo{
+    padding-right: 820px;
+    display:inline-block;
+    vertical-align: middle;
+}
+ .header div.cta-header {
+     display: inline-block;
+     vertical-align: middle;
+    border-radius:4px;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+    cursor:pointer;
+    background:url('images/cta_header_sprite.png');
+     background-size:128px 104px;
+}
+ .header div.cta-header:hover {
+    webkit-box-shadow: none;
+    box-shadow: none;
+    background-position:128px 52px;
+}
+ .fullwidth {
+     display: block;
+     width: 100%;
+     clear: both;
+}
+/*Hero*/
+ .hero {
+     height: 422px;
+     background:url('images/target.svg');
+    /* display: table;
+    */
+     color:#ffffff;
+     display:flex;
+     flex-direction:column;
+     justify-content: center;
+}
+ .hero-content{
+     width:85%;
+    margin:auto;
+    text-align:center;
+    color:#ffffff;
+}
+ h1 {
+     font-size: 48px;
+     line-height: 1.0em;
+    margin:0;
+     font-family: "Scandia-Bold", Helvetica, Arial, sans-serif;
+     margin-bottom:16px;
+     font-weight:bold;
+}
+ .slhero {
+     font-size: 18px;
+     font-size:20px;
+     padding:0 0 25px 0;
+}
+/*Openings*/
+ .hero-content > div:nth-of-type(2) {
+    width:400px;
+    margin:auto;
+    background:url('images/entry.png');
+    border-radius:2px 0px 0px 2px;
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.5);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 400px 60px;
+    height:60px;
+}
+ input{
+    line-height:60px;
+    width:180px;
+    border:0;
+    padding:0;
+    background:transparent;
+    color:#414042;
+    font-size:16px;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ #store-container{
+    margin:auto;
+}
+ #store-header{
+    color:#414042;
+    font-size:11px;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:center;
+    padding:34px 0 8px 0;
+}
+ ul{
+    padding:0;
+}
+ li {
+    width:194px;
+    float:left;
+    list-style: none;
+    margin:0;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:28px;
+    text-align:center;
+    color:#414042;
+}
+ li span{
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:11px;
+    text-align:center;
+    color:#7B7B7B;
+}
+ .cta{
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:11px;
+     float:right;
+    height:60px;
+    width:140px;
+    background:#71B045;
+    border-radius:0px 2px 2px 0px;
+    line-height:60px;
+    cursor:pointer;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+}
+ ::-webkit-input-placeholder {
+     color:#9F9F9F;
+    font-size:16px;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ ::-moz-placeholder {
+     color:#9F9F9F;
+    font-size:16px;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ :-ms-input-placeholder {
+     color:#9F9F9F;
+    font-size:16px;
+    font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ #store-cta{
+    clear: both;
+    background:url('images/store_cta.png');
+    height:50px;
+    width:194px;
+    margin:auto;
+    margin-top: 140px;
+    background-repeat: no-repeat;
+    background-size:194px 50px;
+    display:none;
+    cursor:pointer;
+}
+ #alert{
+    clear: both;
+    padding:5px 0 0 0;
+     font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:left;
+    font-size:11px;
+    color:#EF7C42;
+     display:none;
+}
+ .terms {
+     padding-top: 30px;
+     letter-spacing: 0.5px;
+    font-size:10px;
+}
+ h2 {
+     font-family: "Scandia-Bold", Helvetica, Arial, sans-serif;
+     font-size: 40px;
+     line-height: 1.15em;
+     text-align: center;
+     color: #430078;
+     font-weight:bold;
+     font-family: "Scandia-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color:#414042;
+     margin:0;
+     padding:0px 0 40px 0;
+}
+/*Three Column*/
+ .third{
+    width:33.3333%;
+    float:left;
+    margin-bottom:20px;
+}
+ .third:nth-of-type(2) > div{
+    text-align: center;
+}
+ .third:nth-of-type(3) > div{
+    text-align: right;
+}
+ .third > div > div {
+    color:#7B7B7B;
+    padding-top:20px;
+    font-size:16px;
+    text-align: center;
+}
+ h3 {
+     font-size: 24px;
+     line-height: 27px;
+     padding: 5px 0 0 0;
+     margin: 0;
+     color: #414042;
+     font-family: "Scandia-Bold", Helvetica, Arial, sans-serif;
+     margin-top:30px;
+     text-align: center;
+}
+ .cta-bottom{
+    padding:28px 0 76px 0;
+    text-align:center;
+    cursor:pointer;
+}
+ .banner-bottom{
+    background:#414042;
+    font-size:11px;
+    text-align:center;
+    color:#F7F4EA;
+    height:75px;
+    line-height:75px;
+}
+ 
+ .show_on_mobile {
+     display: none!important;
+     height: 0;
+     max-height: 0;
+}
+
+ @media only screen and (max-width: 600px) {
+     section, .fullwidth, .half, .third {
+         width: 100%!important;
+    }
+     .header > div {
+        width:85%!important;
+    }
+     .imgfullwidth {
+         display: block!important;
+         width: 100%!important;
+         height: auto!important;
+    }
+     .container {
+         width: 100%!important;
+    }
+     .header img.logo {
+         padding-right:0!important;
+    }
+     .header div.cta-header {
+         float: right!important;
+         margin-top: 15px!important;
+    }
+     #store-container, li {
+         width:100%!important;
+    }
+     .hide_mobile {
+         display: none!important;
+    }
+     .hero {
+         height: 500px;
+    }
+     h1{
+        font-size:34px!important;
+    }
+     .hero-content > div:nth-of-type(2) {
+        width:100%!important;
+         border-radius: 2px;
+        background: url(images/entry_mobile.jpg);
+         background-position: top left;
+        background-size: 500px 60px;
+        background-repeat:no-repeat!important;
+    }
+    input {width:70%!important;}
+       .slhero {
+        padding: 0px 0 25px 0!important;
+    }
+ 
+     .cta{
+         border-radius: 2px;
+         width: 100%!important;
+         display: block!important;
+         margin: 15px auto 4px auto!important;
+         clear: both!important;
+    }
+     #alert{
+        padding:0!important;
+        font-size:9px!important;
+    }
+     .terms {
+         padding-top: 100px;
+    }
+     #store-cta{
+         margin-top: 310px;
+    }
+    .third > div > div {
+        padding:20px 20px 10px 20px!important;
+    }
+     .banner-bottom{
+        line-height: 13px!important;
+        padding: 20px 20px 20px 20px!important;
+        height: 30px!important;
+    }
+     .show_on_mobile {
+         display: block!important;
+         width: 100%!important;
+         max-height: 369px!important;
+         height: auto!important;
+         overflow: visible!important;
+         float: none!important;
+    }
+  
+}
